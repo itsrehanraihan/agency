@@ -1,0 +1,373 @@
+:root {
+  --prime:#5584ff;
+  --text: unset;
+  --hover: .3s ease-in-out;
+}
+
+body {
+  background-color: #5584ff;
+  color: #ddd;
+  background: url("https://www.foxwood.sg/wp-content/uploads/2020/11/Smoke-Transparent.png") no-repeat center/cover;
+}
+
+.none {
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: .7rem 1.4rem;
+  background: var(--prime);
+  color: var(--white);
+  margin: 1rem 0;
+  border: 1px solid transparent;
+  -webkit-transition: all var(--hover);
+  transition: all var(--hover);
+}
+
+.btn:hover {
+  background: transparent;
+  border-color: var(--prime);
+}
+
+.cta {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: .6rem 1.3rem;
+  border: 1px solid var(--prime);
+  -webkit-transition: all var(--hover);
+  transition: all var(--hover);
+}
+
+.cta:hover {
+  background: var(--prime);
+}
+
+.sec-title {
+  border-left: 4px solid #fff;
+  margin-bottom: 2rem;
+}
+
+.sec-title * {
+  padding: 0 1rem;
+}
+
+.sec-pad {
+  padding: 2rem 0;
+}
+
+.bg {
+  background: #101023;
+  border: 0.1px solid rgba(0, 0, 0, 0.103);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-family: barlow;
+  font-weight: 600;
+  color: #fff;
+}
+
+.logo span {
+  color: var(--prime);
+}
+
+header {
+  border-bottom: 1px solid rgba(192, 192, 192, 0.146);
+}
+
+header.active {
+  background: rgba(0, 0, 0, 0.438);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+header nav .menu li a {
+  margin: 0 1.3rem;
+}
+
+header nav .menu li a:hover, header nav .menu li a.active {
+  color: var(--prime);
+}
+
+/*home*/
+.home {
+  background: #101023;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.home .element {
+  color: var(--prime);
+}
+
+.home p {
+  color: #ddd;
+}
+
+.theme {
+  background: #101024;
+}
+
+.theme .grid-3 {
+  -webkit-box-align: stretch !important;
+      -ms-flex-align: stretch !important;
+          align-items: stretch !important;
+}
+
+.theme .grid-3 .item {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.theme .grid-3 .item .title {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.theme .grid-3 .item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.509);
+  top: 0;
+  left: -100%;
+  height: 50%;
+  -webkit-transition: left .3s;
+  transition: left .3s;
+}
+
+.theme .grid-3 .item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.53);
+  bottom: 0;
+  right: -100%;
+  -webkit-transition: right .3s;
+  transition: right .3s;
+}
+
+.theme .grid-3 .item:hover::after {
+  right: 0;
+}
+
+.theme .grid-3 .item:hover::before {
+  left: 0;
+}
+
+.theme .grid-3 .item:hover .title {
+  opacity: 1;
+}
+
+/*features*/
+.features {
+  background: #111;
+}
+
+.features .grid-3 {
+  -webkit-box-align: stretch !important;
+      -ms-flex-align: stretch !important;
+          align-items: stretch !important;
+}
+
+.features .grid-3 .item .icon svg {
+  height: 40px;
+  width: 40px;
+}
+
+.features .grid-3 .item p {
+  font-size: 14px;
+  margin: 1rem 1.5rem;
+}
+
+/*contact*/
+.contact {
+  background: #101010;
+  /*------/ Form Validation /------*/
+}
+
+.contact form .form-control {
+  width: 100%;
+  display: block;
+}
+
+.contact form .form-control input, .contact form .form-control textarea {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  resize: vertical;
+  color: #fff;
+}
+
+.contact form .form-control.success input {
+  border-color: lime;
+}
+
+.contact form .form-control.error input {
+  border-color: crimson;
+}
+
+.contact form .form-control small {
+  color: crimson;
+  opacity: 0;
+}
+
+.contact form .form-control.error small {
+  opacity: 1;
+}
+
+/*swipper*/
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*reviews*/
+.testimonial {
+  background: #101010;
+}
+
+.testimonial .swiper-slide .item .imgbox svg {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  height: 60px;
+  width: 60px;
+}
+
+.testimonial .swiper-slide .item p {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+/*bran*/
+.clients .swiper-container2 {
+  margin: 1rem 0 0 0;
+  overflow: hidden;
+}
+
+.clients .swiper-container2 .swiper-slide svg {
+  width: 50px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  height: 50px;
+}
+
+/*subscribe*/
+.sub input {
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+
+/*footer*/
+footer .part .social svg {
+  height: 30px;
+  width: 30px;
+}
+
+/*nav*/
+@media (max-width: 768px) {
+  header nav .none {
+    display: block;
+  }
+  header nav .menu {
+    position: absolute;
+    height: 100vh;
+    left: -100%;
+    top: 0;
+    background: #101010;
+    z-index: -100;
+    width: 40%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    min-width: 200px;
+    -webkit-transition: left .3s;
+    transition: left .3s;
+  }
+  header nav .menu.open {
+    left: 0;
+  }
+  header nav .menu li {
+    margin-bottom: 2rem;
+  }
+  header nav .cta {
+    display: none;
+  }
+  header nav .m-menu {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 540px) {
+  .home .grid-2 {
+    padding: 4rem 0;
+  }
+  .swiper-container .swiper-button-next, .swiper-container .swiper-button-prev {
+    display: none;
+  }
+  footer .grid-3 .part {
+    text-align: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  footer .grid-3 .part p {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
